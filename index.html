@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <header id="navbar">
+        <nav class="navbar-container container">
+            <a href="/" class="home-link">
+                <i class="fas fa-globe" style="font-size: 24px; color: #337ab7;padding-right: 10px;"></i>
+                AWESOME WORLD
+              </a>
+              
+          <button type="button" class="navbar-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navbar-menu">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          <div id="navbar-menu" class="detached">
+            <ul class="navbar-links">
+              <li class="navbar-item"><a class="navbar-link" href="about.html">About</a></li>
+              
+              <li class="navbar-item"><a class="navbar-link" href="/contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div id="home" class="video-container">
+            <video class="video-background" autoplay loop muted playsinline>
+              <source src="animals-video.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div id="home" class="content">
+              <h1>Welcome to the new World!</h1>
+              <p>The nature in its own way</p>
+              <button onclick="window.location.href='https://www.pinterest.com/octopuschick/newly-discovered-animals-other-species/'">Explore</button>
+            </div>
+        </div>
+    </header>
+    
+  </body>
+</html>

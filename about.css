@@ -1,0 +1,194 @@
+body {
+  /*background-image: url("images/forest-hero-2.jpg");*/
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    position: fixed; /* add this property */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* add this property to ensure it's on top of other elements */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a.active {
+    color: #ccc;
+}
+
+.hero {
+    position: relative;
+    height: 100vh; /* make it full screen height */
+    width: 100%; /* make it full screen width */
+    margin: 0; /* remove any margins */
+    padding: 0;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    
+    background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+    padding: 2em;
+    /*background-color: #f7f7f7;*/
+    margin-top: 60px; /* keep this margin to push content below navigation bar */
+    display: block;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.about-content h2 {
+    margin-top: 20px;
+    width: 100%;
+    color: #fff;;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.about-content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.about-content li {
+    margin-bottom: 20px;
+    margin-right: 20px;
+    width: calc(30% - 20px); /* adjust the width to your liking */
+    background-color: rgba(255, 255, 255, 0.7); /* add transparency to the background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.about-content li img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.about-content li:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    clear: both;
+}
+/* Add this CSS to style the slider */
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+  }
+  
+  .slider {
+    display: flex;
+    flex-wrap: nowrap;
+    animation: move 30s linear infinite;
+    -webkit-marquee: linear infinite;
+  -webkit-marquee-direction: forwards;
+  -webkit-marquee-speed: slow;
+  -moz-marquee: linear infinite;
+  -moz-marquee-direction: forwards;
+  -moz-marquee-speed: slow;
+/* marquee: linear infinite;
+  marquee-direction: forwards;
+  marquee-speed: slow; */
+  }
+  
+  .slider img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    margin: 10px;
+    border-radius: 10px;
+    flex: 0 0 auto;
+  }
+  
+  @keyframes move {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .slider img:nth-child(1) {
+    animation: reappear 30s linear infinite;
+    animation-delay: 0s;
+  }
+  
+  @keyframes reappear {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  .hoverImages:hover {
+    margin-top: -10px; /* adjust the value to your liking */
+    cursor: pointer;
+  }
